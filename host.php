@@ -17,14 +17,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
-<body>
+<body style="background-color: #f3f4f6;">
     <div class="container mt-5">
-        <h1 class="text-center">Host Room: <?php echo $_SESSION['roomName']; ?></h1>
-        <div id="resultArea" class="mt-4">
-            <h3>Player Results:</h3>
-            <ul id="results" class="list-group"></ul>
+        <div class="card shadow-lg p-3 mb-5 bg-body rounded">
+            <div class="card-header bg-primary text-white text-center">
+                <h1>Host Room: <?php echo $_SESSION['roomName']; ?></h1>
+            </div>
+            <div class="card-body">
+                <div id="resultArea" class="mt-4">
+                    <h3>Player Results:</h3>
+                    <table class="table table-striped mt-3">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Player Name</th>
+                                <th scope="col">Time</th>
+                            </tr>
+                        </thead>
+                        <tbody id="results">
+                            <!-- Player results will be loaded here dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+                <button id="resetBtn" class="btn btn-danger mt-3 w-100">Reset</button>
+            </div>
         </div>
-        <button id="resetBtn" class="btn btn-danger mt-3">Reset</button>
     </div>
 
     <script>

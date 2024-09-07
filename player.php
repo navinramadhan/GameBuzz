@@ -17,11 +17,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
-<body>
+<body style="background-color: #f3f4f6;">
     <div class="container mt-5">
-        <h1 class="text-center">Player: <?php echo $_SESSION['playerName']; ?> in Room:
-            <?php echo $_SESSION['roomName']; ?></h1>
-        <button id="buzzBtn" class="btn btn-success btn-lg mt-5">Buzz In!</button>
+        <div class="card shadow-lg p-3 mb-5 bg-body rounded text-center">
+            <div class="card-header bg-warning text-dark">
+                <h1>Player Name : <span class="text"><?php echo $_SESSION['playerName']; ?></span> in Room:
+                    <span class="text-danger"><?php echo $_SESSION['roomName']; ?></span>
+                </h1>
+            </div>
+            <div class="card-body">
+                <button id="buzzBtn" class="btn btn-success btn-lg mt-5"
+                    style="font-size: 2em; width: 100%; height: 100px;">Click Faster!</button>
+            </div>
+        </div>
     </div>
 
     <script>
