@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <table class="table table-striped mt-3">
                         <thead>
                             <tr>
-                                <th scope="col">#</th>
+                                <th scope="col">No</th>
                                 <th scope="col">Player Name</th>
                                 <th scope="col">Time</th>
                             </tr>
@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <!-- Player results will be loaded here dynamically -->
                         </tbody>
                     </table>
-                </div>
+                </div> 
                 <button id="resetBtn" class="btn btn-danger mt-3 w-100">Reset</button>
             </div>
         </div>

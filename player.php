@@ -20,14 +20,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body style="background-color: #f3f4f6;">
     <div class="container mt-5">
         <div class="card shadow-lg p-3 mb-5 bg-body rounded text-center">
-            <div class="card-header bg-warning text-dark">
-                <h1>Player Name : <span class="text"><?php echo $_SESSION['playerName']; ?></span> in Room:
-                    <span class="text-danger"><?php echo $_SESSION['roomName']; ?></span>
-                </h1>
+            <div class="card-header bg-warning text-light">
+                <h3>Hi,
+                    <span class="text-primary"><?php echo $_SESSION['playerName']; ?></span>
+                    You in
+                    <span class="text-primary"><?php echo $_SESSION['roomName']; ?></span>
+                    Room
+                </h3>
             </div>
             <div class="card-body">
-                <button id="buzzBtn" class="btn btn-success btn-lg mt-5"
-                    style="font-size: 2em; width: 100%; height: 100px;">Click Faster!</button>
+                <button id="buzzBtn" class="btn btn-primary btn-lg mt-5"
+                    style="font-size: 2em; width: 100%; height: 100px;"> Click Faster! </button>
             </div>
         </div>
     </div>
